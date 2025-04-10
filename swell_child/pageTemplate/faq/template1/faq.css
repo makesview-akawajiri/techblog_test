@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+.page_faq .common_page_wrap {
+	padding: 70px 0 120px;
+}
+
+.faq_cont_sec .list dl {
+	background: #F5F5F5;
+}
+
+.faq_cont_sec .list dl:nth-child(even) {
+	background: #E3E3E3;
+}
+
+.faq_cont_sec .list dl+dl {
+	margin-top: 0.6em;
+}
+
+.faq_cont_sec .list dl dt {
+	display: flex;
+	align-items: center;
+	gap: 0 0.8em;
+	padding: 20px 40px;
+}
+
+.faq_cont_sec .list dl dt .en {
+	font-size: 28px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1;
+	flex-shrink: 0;
+}
+
+.faq_cont_sec .list dl dt .text {
+	width: 100%;
+	font-size: 18px;
+	letter-spacing: .08em;
+	font-weight: 700;
+}
+
+.faq_cont_sec .list dl dt .mark {
+	width: 36px;
+	aspect-ratio: 1;
+	background: #fff;
+	border-radius: 50%;
+	display: block;
+	flex-shrink: 0;
+	position: relative;
+}
+
+.faq_cont_sec .list dl dt .mark::before,
+.faq_cont_sec .list dl dt .mark::after {
+	content: "";
+	width: 2px;
+	height: 41%;
+	background: #3E3E3E;
+	border-radius: 3px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	transition: .4s;
+}
+
+.faq_cont_sec .list dl dt .mark::after {
+	rotate: 90deg;
+}
+
+.faq_cont_sec .list dl dt.nowOpen .mark::before {
+	rotate: 90deg;
+}
+
+.faq_cont_sec .list dl dd {
+	border-top: 1px dotted #3E3E3E;
+	margin: 0 30px;
+	padding: 25px 75px 30px 55px;
+}
+
+
+.faq_cont_sec .list dl dd .text {
+	font-size: 16px;
+	letter-spacing: .08em;
+	line-height: 1.6;
+}
+
+.faq_cont_sec .list dl dd .closeBtnHat {
+	display: none;
+}
+
+@media (max-width: 750px) {
+	.wrap {
+		max-width: 95%;
+	}
+
+	.page_faq .common_page_wrap {
+		padding: 10vw 0 20vw;
+	}
+
+	.faq_cont_sec .list dl+dl {
+		margin-top: 0.7em;
+	}
+
+	.faq_cont_sec .list dl dt {
+		padding: 5vw 3vw;
+	}
+
+	.faq_cont_sec .list dl dt .en {
+		font-size: 6.1vw;
+	}
+
+	.faq_cont_sec .list dl dt .text {
+		font-size: 3.6vw;
+		line-height: 1.5;
+	}
+
+	.faq_cont_sec .list dl dt .mark {
+		width: 8.2vw;
+	}
+
+	.faq_cont_sec .list dl dd {
+		margin: 0 3vw;
+		padding: 4vw 0 6vw;
+	}
+
+	.faq_cont_sec .list dl dd .text {
+		font-size: 3.6vw;
+		letter-spacing: .06em;
+	}
+}

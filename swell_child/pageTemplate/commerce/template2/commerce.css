@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+.page_commerce_main {
+	padding-block: 25px 0;
+}
+
+.breadcrumb {
+	text-align: right;
+}
+
+.page_commerce .common_page_wrap {
+	padding-block: 145px 180px;
+}
+
+.commerce_cont_sec .inner {
+	display: grid;
+	grid-template-columns: 1fr 800px;
+	gap: 50px;
+}
+
+.commerce_cont_sec .info .title_box .title {
+	font-size: 30px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.commerce_cont_sec .cont dl {
+	border-top: 1px solid #E5E5E5;
+	padding: 1.9em 2.5em 0;
+}
+
+.commerce_cont_sec .cont dl+dl {
+	margin-block: 1.9em 0;
+}
+
+.commerce_cont_sec .cont dl dt {
+	margin-block: 0 0.6em;
+}
+
+.commerce_cont_sec .cont dl dt .title {
+	font-size: 18px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.commerce_cont_sec .cont dl dd .text {
+	font-size: 14px;
+	letter-spacing: .14em;
+	font-weight: 400;
+}
+
+.commerce_cont_sec .cont dl dd .price_table {
+	margin-block: 65px;
+}
+
+.commerce_cont_sec .cont dl dd .price_table table {
+	width: 100%;
+}
+
+.commerce_cont_sec .cont dl dd .price_table table th,
+.commerce_cont_sec .cont dl dd .price_table table td {
+	border: 2px solid #fff;
+	letter-spacing: .08em;
+	line-height: 1.4;
+	vertical-align: middle;
+}
+
+.commerce_cont_sec .cont dl dd .price_table table th {
+	background: #EAEAEA;
+	padding: 1em 0.7em;
+	font-size: 14px;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.commerce_cont_sec .cont dl dd .price_table table th .small {
+	display: block;
+	font-size: 0.93em;
+	text-align: center;
+}
+
+.commerce_cont_sec .cont dl dd .price_table table td {
+	background: #FAFAFA;
+	padding: 0.95em 0.7em;
+	font-size: 13px;
+	font-weight: 400;
+	border-width: 0 2px;
+}
+
+.commerce_cont_sec .cont dl dd .price_table table td.price {
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 14px;
+	text-align: center;
+	font-weight: 300;
+}
+
+@media (max-width: 750px) {
+	.page_commerce_main {
+		padding-block: 3.5vw 0;
+	}
+
+	.page_commerce .common_page_wrap {
+		padding-block: 15vw 23vw;
+	}
+
+	.commerce_cont_sec .inner {
+		display: block;
+	}
+
+	.commerce_cont_sec .info {
+		margin-block: 0 6.5vw;
+	}
+
+	.commerce_cont_sec .info .title_box .title {
+		font-size: 4.6vw;
+	}
+
+	.commerce_cont_sec .cont dl {
+		padding: 1.4em 0 0;
+	}
+
+	.commerce_cont_sec .cont dl+dl {
+		margin-block: 1.4em 0;
+	}
+
+	.commerce_cont_sec .cont dl dt {
+		margin-block: 0 0.5em;
+	}
+
+	.commerce_cont_sec .cont dl dt .title {
+		color: #6F6F6F;
+		font-size: 3.3vw;
+		font-weight: 500;
+	}
+
+	.commerce_cont_sec .cont dl dd .text {
+		font-size: 3.8vw;
+		letter-spacing: .06em;
+		font-weight: 700;
+		line-height: 1.5;
+	}
+
+	.commerce_cont_sec .cont dl dd .text a {
+		text-decoration: none;
+		color: initial;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table {
+		margin-block: 3vw 0;
+		overflow-x: scroll;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table table {
+		width: 194vw;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table table th {
+		font-size: 3.6vw;
+		padding: 0.9em 0.6em;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table table th .small {
+		font-size: 1em;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table table td {
+		font-size: 3.6vw;
+		padding: 0.7em 0.6em;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table table td.price {
+		font-size: 3.6vw;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table .scroll-hint-icon {
+		width: 23vw;
+		height: 23vw;
+		background: rgba(0, 0, 0, 0.4);
+		border-radius: 4px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0.2em;
+		top: 50%;
+		left: 50%;
+		translate: -50% -50%;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table .scroll-hint-icon-wrap.is-active .scroll-hint-icon {
+		opacity: 1;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table .scroll-hint-icon::before {
+		background-image: url(./image/scrollhint.svg);
+		width: 12.8vw;
+		height: auto;
+		aspect-ratio: 1;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table .scroll-hint-icon::after {
+		content: none;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table .scroll-hint-text {
+		display: none;
+	}
+}

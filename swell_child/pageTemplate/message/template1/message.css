@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+.page_message .common_page_wrap {
+	padding-block: 100px 135px;
+}
+
+.message_cont_sec .top_box {
+	text-align: center;
+	margin-block: 0 4em;
+	position: relative;
+	z-index: 0;
+}
+
+.message_cont_sec .top_box .title {
+	font-size: 28px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.message_cont_sec .top_box .en {
+	color: #F0F0F0;
+	font-size: 80px;
+	letter-spacing: .02em;
+	font-weight: 700;
+	line-height: 1;
+	position: absolute;
+	top: -0.6em;
+	left: 50%;
+	translate: -50% 0;
+	z-index: -1;
+}
+
+.message_cont_sec .cont {
+	display: grid;
+	grid-template-columns: 470px 1fr;
+	gap: 80px;
+}
+
+.message_cont_sec .cont .img_box .img {
+	margin-block: 0 0.9em;
+}
+
+.message_cont_sec .cont .img_box .img img {
+	width: 100%;
+	aspect-ratio: 47/40;
+	object-fit: cover;
+}
+
+.message_cont_sec .cont .img_box .name_box {
+	position: relative;
+	z-index: 0;
+}
+
+.message_cont_sec .cont .img_box .name_box .position {
+	font-size: 18px;
+	letter-spacing: .08em;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+.message_cont_sec .cont .img_box .name_box .name {
+	font-size: 30px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.message_cont_sec .cont .img_box .name_box .en_name {
+	color: #F0F0F0;
+	font-size: 50px;
+	letter-spacing: .02em;
+	font-weight: 700;
+	line-height: 1;
+	position: absolute;
+	top: 0.1em;
+	left: 0.4em;
+	z-index: -1;
+}
+
+.message_cont_sec .cont .text_box .text {
+	font-size: 15px;
+	letter-spacing: .08em;
+	font-weight: 400;
+	line-height: 1.9;
+}
+
+.message_cont_sec .cont .text_box .text+.text {
+	margin-block: 2em 0;
+}
+
+@media (max-width: 750px) {
+	.page_message .common_page_wrap {
+		padding-block: 19vw 17vw;
+	}
+
+	.message_cont_sec .top_box {
+		margin-block: 0 2em;
+	}
+
+	.message_cont_sec .top_box .title {
+		font-size: 5.1vw;
+	}
+
+	.message_cont_sec .top_box .en {
+		font-size: 12.8vw;
+	}
+
+	.message_cont_sec .cont {
+		grid-template-columns: 1fr;
+		gap: 4.5vw;
+	}
+
+	.message_cont_sec .cont .img_box .img img {
+		aspect-ratio: 35/24;
+	}
+
+	.message_cont_sec .cont .img_box .name_box .position {
+		font-size: 3.6vw;
+	}
+
+	.message_cont_sec .cont .img_box .name_box .name {
+		font-size: 5.6vw;
+	}
+
+	.message_cont_sec .cont .img_box .name_box .en_name {
+		font-size: 9.7vw;
+		top: 0.15em;
+		left: 0.2em;
+	}
+
+	.message_cont_sec .cont .text_box .text {
+		font-size: 3.6vw;
+		line-height: 1.8;
+	}
+}

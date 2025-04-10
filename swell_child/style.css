@@ -1,0 +1,979 @@
+@charset "UTF-8";
+/*
+    Template: swell
+    Theme Name: SWELL CHILD
+    Theme URI: https://swell-theme.com/
+    Description: SWELLの子テーマ
+    Version: 1.0.0
+    Author: LOOS WEB STUDIO
+    Author URI: https://loos-web-studio.com/
+
+    License: GNU General Public License
+    License URI: http://www.gnu.org/licenses/gpl.html
+*/
+
+:root {
+    --main-color: #000;
+    --sub-color: #fff;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    /* 不要な指定は消す */
+    font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+    font-family: "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+}
+
+body {
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+a[href $='.pdf'] {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-decoration: underline;
+    color: #000;
+    line-height: 1.5;
+}
+
+a[href $='.pdf']::before {
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    width: 30px;
+    height: 38px;
+    background-image: url(/wp-content/themes/child/image/icon/icon_pdf.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 15px;
+}
+
+a[href $='.pdf']:hover {
+    text-decoration: none;
+}
+
+.wrap {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.wrap.mid {
+    width: 1240px;
+}
+
+.wrap.lr {
+    width: 1340px;
+}
+
+/* PC固定ページ 共通設定 */
+.common_page_main {
+    background: #F5F5F5;
+    padding-block: 140px;
+    margin-block: 0 1em;
+}
+
+.common_page_main .title_box {
+    text-align: center;
+}
+
+.common_page_main .title_box .title {
+    font-size: 40px;
+    letter-spacing: .08em;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.common_page_wrap {
+    padding: 100px 0;
+}
+
+.not_found .text {
+    text-align: center;
+}
+
+.reserve_text {
+    text-align: center;
+    font-size: 30px;
+}
+
+/* パンくず */
+.breadcrumb {
+    font-size: 12px;
+    color: #3E3E3E;
+    letter-spacing: .08em;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #3E3E3E;
+}
+
+/* PC固定ページ お問い合わせ */
+.contact_form_disc {
+    color: #3E3E3E;
+    letter-spacing: .08em;
+    font-weight: 400;
+    text-align: center;
+    margin-block: 0 3.8em;
+}
+
+.contact_form_disc .text {
+    font-size: 16px;
+    margin-block: 0 1em;
+}
+
+.contact_form_disc .caution {
+    font-size: 14px;
+}
+
+.common_contact_form .form_box {
+    margin-block: 0 50px;
+}
+
+.common_contact_form .form_box dl {
+    display: grid;
+    grid-template-columns: 26.5% 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.common_contact_form .form_box dl.start {
+    align-items: flex-start;
+}
+
+.common_contact_form .form_box dl+dl {
+    margin-block: 1.6em 0;
+}
+
+.common_contact_form .form_box dl dt {
+    display: flex;
+    align-items: center;
+    gap: 1.3em;
+    font-size: 16px;
+    letter-spacing: .08em;
+    font-weight: 700;
+    padding-inline: 0 0.5em;
+    position: relative;
+}
+
+.common_contact_form .form_box dl dt .label {
+    flex-shrink: 0;
+    color: #3E3E3E;
+    font-size: 12px;
+    letter-spacing: .2em;
+    font-weight: 700;
+    border-radius: 100vmax;
+    padding: 0.2em 0.9em;
+}
+
+.common_contact_form .form_box dl dt .label.hissu {
+    background: #C70000;
+    color: #fff;
+}
+
+.common_contact_form .form_box dl dt .label.ninni {
+    background: #E0E0E0;
+}
+
+.common_contact_form .form_box dl dt::after {
+    content: "";
+    width: 1px;
+    height: 30px;
+    background: #AAA;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.common_contact_form input[type="text"],
+.common_contact_form input[type="email"],
+.common_contact_form #zip {
+    width: 100%;
+    background: #F8F8F8;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: .08em;
+    font-weight: 400;
+    padding: 0.8em 1em;
+}
+
+.common_contact_form textarea {
+    width: 100%;
+    height: 180px;
+    background: #F8F8F8;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    padding: 1em;
+    font-size: 14px;
+    letter-spacing: .08em;
+    font-weight: 400;
+}
+
+.common_contact_form input::placeholder,
+.common_contact_form textarea::placeholder {
+    color: #C7C4C4;
+}
+
+.common_contact_form select {
+    width: 47.5%;
+    background: #F8F8F8;
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    font-size: 14px;
+    letter-spacing: .08em;
+    padding: 1.1em 1em;
+}
+
+.common_contact_form select.empty {
+    color: #C7C4C4;
+}
+
+.page_contact #btn_wrap {
+    justify-content: center;
+    text-align: right;
+    width: 74%;
+    margin: auto;
+}
+
+.page_contact #btn_wrap button {
+    background-color: var(--main-color);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+    color: #fff;
+    display: block;
+    width: 310px;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: 900;
+    transition: .3s;
+    text-align: center;
+    letter-spacing: .08em;
+    margin: auto;
+}
+
+.page_contact #btn_wrap button[name="submitBack"] {
+    background: #333;
+    margin-top: 20px;
+}
+
+.page_contact #btn_wrap button:hover {
+    opacity: .8;
+}
+
+.privacy_term_outer .privacy_term_inner {
+    height: 138px;
+    margin: auto;
+    overflow: auto;
+}
+
+.privacy_term_outer .privacy_term_inner .privacy_index {
+    font-size: 14px;
+}
+
+.privacy_term_outer .privacy_term_inner .main_text {
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.privacy_term_outer .privacy_term_inner dl dt {
+    font-size: 13px;
+    border-left: solid 3px #ccc;
+    padding-left: 1em;
+    margin-bottom: 5px;
+}
+
+.privacy_term_outer .privacy_term_inner dl dd {
+    font-size: 13px;
+}
+
+.privacy_term_outer .privacy_term_inner dl+dl {
+    margin-top: 30px;
+}
+
+.privacy_term_outer .privacy_term_inner::-webkit-scrollbar {
+    width: 8px;
+}
+
+.privacy_term_outer .privacy_term_inner::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.privacy_term_outer .privacy_term_inner::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.privacy_term_outer {
+    border-top: solid 1px #e3e3e3;
+    padding: 30px 0;
+    border-bottom: solid 1px #e3e3e3;
+    width: 60%;
+    margin: 0 auto 50px;
+}
+
+.privacy_check_list .mwform-checkbox-field-text {
+    padding-right: 0;
+}
+
+.privacy_check_list .error {
+    font-size: 12px;
+}
+
+.privacy_term_detail {
+    text-align: center;
+    font-size: 13px;
+    margin: 20px 0;
+    position: relative;
+    font-weight: 600;
+}
+
+.privacy_term_detail::after {
+    content: "";
+    margin: 5px auto 0;
+    border: solid #333;
+    border-width: 2px 2px 0 0;
+    width: 10px;
+    aspect-ratio: 1 / 1;
+    min-width: 0;
+    rotate: 135deg;
+    display: block;
+}
+
+.mw_wp_form_confirm .privacy_check_list,
+.mw_wp_form_confirm .privacy_term_detail {
+    display: none;
+}
+
+/* ラジオボタン デザイン */
+.radio_btns,
+.checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em 1.5em;
+}
+
+/* ラジオボタンを隠す */
+.radio_btns input[type=radio].radio_btns__item {
+    display: none;
+}
+
+.radio_btns label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* spanの左側にボタンを配置するスペースを作る */
+.radio_btns .radio_btns__item+span {
+    color: #3E3E3E;
+    font-size: 15px;
+    letter-spacing: .08em;
+    font-weight: 600;
+    padding-left: 2em;
+    display: inline-block;
+    position: relative;
+}
+
+/* 各パーツを作成 */
+.radio_btns .radio_btns__item+span::before,
+.radio_btns .radio_btns__item+span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 1px solid #E6E6E6;
+    background: #F8F8F8;
+    border-radius: 50%;
+    width: 20px;
+    aspect-ratio: 1;
+    min-width: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/* after上書き */
+.radio_btns .radio_btns__item+span::after {
+    width: 10px;
+    aspect-ratio: 1;
+    min-width: 0;
+    top: 0px;
+    left: 5px;
+    border: none;
+    background: #5A5A5A;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    transition: all .3s;
+}
+
+/*
+  checked状態
+  文字のcolorとボタンのopacityを変更
+*/
+.radio_btns .radio_btns__item:checked+span::after {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+/* チェックボックス デザイン */
+.page_contact input[type="checkbox"] {
+    /* デフォルトcheckボックス非表示*/
+    display: none;
+}
+
+.mwform-checkbox-field label {
+    cursor: pointer;
+}
+
+.mwform-checkbox-field-text {
+    color: #3E3E3E;
+    font-size: 15px;
+    letter-spacing: .08em;
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 30px;
+}
+
+.mwform-checkbox-field-text::before,
+.mwform-checkbox-field-text::after {
+    content: "";
+    position: absolute;
+    display: block;
+}
+
+.mwform-checkbox-field-text::before {
+    background: #F8F8F8;
+    border: 1px solid #E6E6E6;
+    border-radius: 2px;
+    width: 20px;
+    aspect-ratio: 1 / 1;
+    min-width: 0;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.mwform-checkbox-field-text::after {
+    border-width: 3px;
+    border-color: transparent transparent #333 #333;
+    border-style: solid;
+    width: 20px;
+    aspect-ratio: 2/1;
+    min-width: 0;
+    margin-top: -0.2em;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-45deg);
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked+.mwform-checkbox-field-text::after {
+    opacity: 1;
+}
+
+.mw_wp_form .horizontal-item {
+    display: inline-block;
+}
+
+.mw_wp_form .horizontal-item+.horizontal-item {
+    margin-left: 0 !important;
+}
+
+/* サンクスページ */
+
+.page_contact .thanks_textArea .name {
+    font-size: 16px;
+    line-height: 2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page_contact .thanks_textArea .contact_text {
+    margin: 0 auto 50px;
+    width: 62%;
+}
+
+.page_contact .thanks_textArea .ichiran_link {
+    background-color: var(--main-color);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+    color: #fff;
+    display: block;
+    width: 300px;
+    line-height: 50px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: .3s;
+    margin: 0 auto;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-align: center;
+}
+
+.page_contact .thanks_textArea .ichiran_link:hover {
+    opacity: .8;
+}
+
+.page_contact .thanks_textArea .contact_text .space {
+    display: block;
+}
+
+.page_contact .thanks_textArea .contact_text .space {
+    display: block;
+    margin-top: 10px;
+}
+
+/* ステップバー デザイン */
+.page_contact .progressbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5.6em;
+    margin-block: 0 3em;
+}
+
+.page_contact .progressbar .item {
+    color: #3E3E3E;
+    font-size: 14px;
+    letter-spacing: .08em;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5;
+    position: relative;
+}
+
+.page_contact .progressbar .item+.item::before {
+    content: "";
+    width: 50px;
+    height: 1px;
+    background: #E6E6E6;
+    position: absolute;
+    top: 64%;
+    left: -5em;
+}
+
+.page_contact .progressbar .item .mark {
+    width: 36px;
+    aspect-ratio: 1;
+    background: #fff;
+    border: 1px solid #AFAFAF;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 0.5em;
+    position: relative;
+}
+
+.page_contact .progressbar .item .mark::before {
+    content: "";
+    width: 41%;
+    aspect-ratio: 1;
+    background: #5A5A5A;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    opacity: 0;
+}
+
+.page_contact .progressbar .item.active .mark::before {
+    opacity: 1;
+}
+
+.page_contact .progressbar .item .en {
+    display: block;
+    color: #A7A7A7;
+    letter-spacing: 0;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.privacy_check_list {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.privacy_check_list .hissu {
+    background: #c70200;
+    color: #fff;
+    padding: 2px 15px;
+    font-size: 10px;
+    letter-spacing: .08em;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.mw_wp_form .privacy_check_list .horizontal-item {
+    margin: 0;
+}
+
+/* PC固定ページ 個人情報保護方針 */
+.page_privacy .main_text {
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 3em;
+}
+
+.page_privacy dl {
+    margin-bottom: 50px;
+}
+
+.page_privacy dl:last-child {
+    margin-bottom: 0;
+}
+
+.page_privacy dl dt {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: .5em;
+    border-left: 3px solid #ccc;
+    padding-left: 1em;
+}
+
+.page_privacy dl dd {
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* PC固定ページ 404ページ */
+#page_404 {
+    text-align: center;
+}
+
+#page_404 .num {
+    font-size: 100px;
+    font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#page_404 .text {
+    margin-bottom: 1em;
+    font-size: 16px;
+}
+
+@media (max-width: 750px) {
+    .wrap {
+        max-width: 90%;
+    }
+
+    a[href $='.pdf']::before {
+        width: 7vw;
+        height: 8vw;
+        margin-right: 2.5vw;
+    }
+
+    a[href $='.pdf']:hover {
+        text-decoration: underline;
+    }
+
+    body {
+        font-size: 13px;
+        padding-top: 55px;
+    }
+
+    /* SPヘッダー */
+    #sp_header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 1px 1px #ccc;
+        z-index: 999;
+        height: 55px;
+    }
+
+    #sp_header .logo {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        line-height: 0;
+    }
+
+    #sp_header .logo img {
+        height: 40px;
+    }
+
+    #sp_header .icon {
+        color: #000;
+        position: absolute;
+    }
+
+    #sp_header .mail {
+        right: 70px;
+        top: 13px;
+        font-size: 25px;
+    }
+
+    #sp_header .tel {
+        right: 110px;
+        top: 15px;
+        font-size: 20px;
+    }
+
+    /* SP固定ページ 共通設定 */
+    .common_page_main {
+        padding-block: 20vw;
+    }
+
+    .common_page_main .title_box .title {
+        font-size: 5.6vw;
+    }
+
+    .common_page_wrap {
+        padding: 20vw 0;
+    }
+
+    .reserve_text {
+        font-size: 6vw;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+        font-size: 2.5vw;
+    }
+
+    /* SP固定ページ お問い合わせ */
+    .contact_form_disc {
+        margin-block: 0 2em;
+    }
+
+    .contact_form_disc .text {
+        font-size: 3.6vw;
+        margin-block: 0 0.8em;
+    }
+
+    .contact_form_disc .caution {
+        font-size: 3.1vw;
+        letter-spacing: .06em;
+    }
+
+    .common_contact_form .form_box {
+        margin-block: 0 10vw;
+    }
+
+    .common_contact_form .form_box dl {
+        grid-template-columns: 1fr;
+        gap: 0.6em;
+    }
+
+    .common_contact_form .form_box dl+dl {
+        margin-block: 1.3em 0;
+    }
+
+    .common_contact_form .form_box dl dt {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        font-size: 4.1vw;
+        padding-inline: 0;
+    }
+
+    .common_contact_form .form_box dl dt .label {
+        font-size: 3.1vw;
+    }
+
+    .common_contact_form .form_box dl dt::after {
+        content: none;
+    }
+
+    .common_contact_form input[type="text"],
+    .common_contact_form input[type="email"],
+    .common_contact_form #zip {
+        font-size: 3.6vw;
+    }
+
+    .common_contact_form select {
+        width: 100%;
+        font-size: 3.6vw;
+    }
+
+    .common_contact_form textarea {
+        height: 33vw;
+        font-size: 3.6vw;
+    }
+
+    .radio_btns,
+    .checkboxes {
+        gap: 0.5em 2.5em;
+    }
+
+    .page_contact #btn_wrap button {
+        width: 83%;
+        line-height: 15.5vw;
+        font-size: 4.6vw;
+    }
+
+    .page_contact #btn_wrap button[name="submitBack"] {
+        margin-top: 4vw;
+    }
+
+    .mwform-checkbox-field.horizontal-item {
+        display: block;
+    }
+
+    .page_contact #btn_wrap {
+        width: 100%;
+        text-align: center;
+    }
+
+    .privacy_check_list .mwform-checkbox-field-text {
+        font-size: 3.8vw;
+        padding-left: 11vw;
+    }
+
+    .mw_wp_form .privacy_check_list .horizontal-item {
+        margin-right: 4vw;
+    }
+
+    .privacy_check_list .hissu {
+        padding: 0.3vw 4vw;
+    }
+
+    .privacy_check_list {
+        margin-bottom: 6vw;
+    }
+
+    .privacy_term_detail {
+        font-size: 3.4vw;
+        margin: 5vw 0;
+    }
+
+    .privacy_term_outer {
+        width: 96%;
+        padding: 5vw 0;
+    }
+
+    .privacy_term_outer .privacy_term_inner .main_text {
+        font-size: 3.4vw;
+        line-height: 1.6;
+        margin-bottom: 5vw;
+    }
+
+    .privacy_term_outer .privacy_term_inner dl dt {
+        font-size: 3.5vw;
+        margin-bottom: 1.5vw;
+    }
+
+    .privacy_term_outer .privacy_term_inner dl dd {
+        font-size: 3.5vw;
+        line-height: 1.6;
+    }
+
+    .privacy_term_outer .privacy_term_inner dl+dl {
+        margin-top: 7vw;
+    }
+
+    .privacy_term_detail::after {
+        width: 2.5vw;
+        margin: 1.5vw auto 0;
+    }
+
+    /* サンクスページ */
+    .page_contact .thanks_textArea .name {
+        font-size: 4vw;
+        margin-bottom: 3vw;
+    }
+
+    .page_contact .thanks_textArea .contact_text {
+        font-size: 3.5vw;
+        margin-bottom: 2em;
+        width: 100%;
+    }
+
+    .page_contact .thanks_textArea .ichiran_link {
+        width: 80%;
+        line-height: 12vw;
+        font-size: 4vw;
+    }
+
+    /* ステップバー デザイン */
+    .page_contact .progressbar {
+        gap: 4.5em;
+        margin-block: 0 2.5em;
+    }
+
+    .page_contact .progressbar .item {
+        font-size: 3.1vw;
+    }
+
+    .page_contact .progressbar .item+.item::before {
+        width: 5.7vw;
+        top: 63%;
+        left: -3.3em;
+    }
+
+    .page_contact .progressbar .item .mark {
+        width: 7.7vw;
+        margin: 0 auto 0.4em;
+    }
+
+    /* SP固定ページ 個人情報保護方針 */
+    #page_privacy .main_text {
+        font-size: 3.5vw;
+    }
+
+    #page_privacy dl {
+        margin-bottom: 10vw;
+    }
+
+    #page_privacy dl dt {
+        font-size: 4vw;
+    }
+
+    #page_privacy dl dd {
+        font-size: 3.5vw;
+        margin-left: 5vw;
+    }
+
+    /* SP固定ページ 404ページ */
+    #page_404 .num {
+        font-size: 20vw;
+        line-height: 1.5;
+    }
+
+    #page_404 .text {
+        font-size: 3.5vw;
+    }
+
+    /* SP固定ページ サイトマップ */
+    ul#sitemap_list li {
+        margin: 0;
+    }
+
+    body #sitemap_list li a {
+        font-size: 4vw;
+        padding: 1vw 2vw;
+        line-height: 9vw;
+        margin-bottom: 1vw;
+    }
+
+    body #sitemap_list li.home-item {
+        margin-bottom: 4vw;
+    }
+
+    body #sitemap_list {
+        padding: 0;
+    }
+}
