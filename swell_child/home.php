@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main id="main" class="site-main">
-    <p>トップページ</p>
+    <p>トップページの修正2</p>
 </main>
 
 <?php
