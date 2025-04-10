@@ -95,3 +95,5 @@
         ?>
 
     </div>
+
+    <header id="pc_header">ヘッダー</header>
