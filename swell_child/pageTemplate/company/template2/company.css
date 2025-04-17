@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+.page_company_main {
+	background: #F5F5F5;
+	padding: 205px 0;
+}
+
+.breadcrumb {
+	text-align: right;
+	margin-top: 1em;
+}
+
+.page_company .common_page_wrap {
+	padding: 90px 0 140px;
+}
+
+.company_profile_sec .cont {
+	display: grid;
+	grid-template-columns: 1fr 800px;
+	gap: 0 50px;
+}
+
+.company_profile_sec .cont .title_box .title {
+	font-size: 40px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.company_profile_sec .cont .title_box .sub_title {
+	font-size: 14px;
+	letter-spacing: .08em;
+	text-transform: uppercase;
+}
+
+.company_profile_sec .cont .detail .item {
+	border-top: 1px solid #AFAFAF;
+	padding: 0 1.3em;
+}
+
+.company_profile_sec .cont .detail .item .inbox {
+	display: flex;
+	gap: 0 1em;
+}
+
+.company_profile_sec .cont .detail .item .inbox .head {
+	flex-shrink: 0;
+	width: 28%;
+	font-size: 20px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1.5;
+	padding: 1.3em 0;
+}
+
+.company_profile_sec .cont .detail .item .inbox .text_area {
+	width: 100%;
+	font-size: 16px;
+	letter-spacing: .08em;
+	line-height: 1.5;
+	padding: 1.9em 0;
+}
+
+.company_profile_sec .cont .detail .item .map {
+	width: 95%;
+	height: 240px;
+	margin-top: 1em;
+}
+
+.company_profile_sec .cont .detail .item .map iframe {
+	width: 100%;
+	height: 100%;
+	max-height: 100% !important;
+}
+
+@media (max-width: 750px) {
+	.page_company_main {
+		padding: 31vw 0;
+	}
+
+	.breadcrumb .wrap {
+		max-width: 95%;
+	}
+
+	.page_company .common_page_wrap {
+		padding: 13vw 0 18vw;
+	}
+
+	.company_profile_sec .cont {
+		grid-template-columns: 1fr;
+		gap: 10vw 0;
+	}
+
+	.company_profile_sec .cont .title_box .title {
+		font-size: 6.5vw;
+		margin-bottom: 0.2em;
+	}
+
+	.company_profile_sec .cont .title_box .sub_title {
+		font-size: 3.6vw;
+	}
+
+	.company_profile_sec .cont .detail .item {
+		padding: 1.9em 0;
+	}
+
+	.company_profile_sec .cont .detail .item .inbox .head {
+		width: 23vw;
+		font-size: 3.6vw;
+		padding: 0;
+	}
+
+	.company_profile_sec .cont .detail .item .inbox .text_area {
+		font-size: 3.6vw;
+		padding: 0;
+	}
+
+	.company_profile_sec .cont .detail .item .map {
+		width: 100%;
+		height: 55vw;
+	}
+}

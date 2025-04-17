@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+.page_commerce_main {
+	background: #F8F8F8;
+	padding-block: 25px 0;
+}
+
+.page_commerce {
+	background: #F8F8F8;
+}
+
+.page_commerce .common_page_wrap {
+	padding-block: 90px 150px;
+}
+
+.commerce_cont_sec .inner {
+	background: #fff;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+	padding: 100px;
+}
+
+.commerce_cont_sec .sec_title {
+	text-align: center;
+	margin-block: 0 70px;
+}
+
+.commerce_cont_sec .sec_title .title {
+	font-size: 28px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.commerce_cont_sec .cont dl+dl {
+	border-top: 1px dashed #C1C1C1;
+	padding-block: 1.5em 0;
+	margin-block: 1.5em 0;
+}
+
+.commerce_cont_sec .cont dl dt {
+	margin-block: 0 0.3em;
+}
+
+.commerce_cont_sec .cont dl dt .title {
+	font-size: 18px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1.5;
+	border-left: 4px solid var(--main-color);
+	padding-inline: 0.8em 0;
+}
+
+.commerce_cont_sec .cont dl dd {
+	padding-inline: 20px 0;
+}
+
+.commerce_cont_sec .cont dl dd .text {
+	color: #989898;
+	font-size: 15px;
+	letter-spacing: .14em;
+	font-weight: 400;
+	line-height: 1.6;
+}
+
+.commerce_cont_sec .cont dl dd .price_table {
+	margin-block: 35px 0;
+}
+
+.commerce_cont_sec .cont dl dd .price_table table {
+	width: 100%;
+}
+
+.commerce_cont_sec .cont dl dd .price_table table th,
+.commerce_cont_sec .cont dl dd .price_table table td {
+	letter-spacing: .08em;
+	line-height: 1.4;
+	vertical-align: middle;
+}
+
+.commerce_cont_sec .cont dl dd .price_table table th {
+	background: #E3E3E3;
+	padding: 1.3em 1.9em;
+	font-size: 16px;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.commerce_cont_sec .cont dl dd .price_table table th .small {
+	display: block;
+	font-size: 0.87em;
+	text-align: center;
+}
+
+.commerce_cont_sec .cont dl dd .price_table table td {
+	background: #F7F7F7;
+	padding: 1.15em 2.1em;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.commerce_cont_sec .cont dl dd .price_table table tbody tr:nth-child(even) td {
+	background: #EFEFEF;
+}
+
+.commerce_cont_sec .cont dl dd .price_table table td.price {
+	font-family: "Helvetica", "Arial", sans-serif;
+	text-align: center;
+}
+
+@media (max-width: 750px) {
+	.page_commerce_main {
+		background: #fff;
+		padding-block: 3.5vw 0;
+	}
+
+	.page_commerce {
+		background: #fff;
+	}
+
+	.page_commerce .common_page_wrap {
+		padding-block: 15vw 23vw;
+	}
+
+	.commerce_cont_sec .inner {
+		box-shadow: 0 0 4px rgba(0, 0, 0, 0.08);
+		padding: 10vw 3.7vw;
+	}
+
+	.commerce_cont_sec .sec_title {
+		margin-block: 0 7vw;
+	}
+
+	.commerce_cont_sec .sec_title .title {
+		font-size: 4.3vw;
+	}
+
+	.commerce_cont_sec .cont dl+dl {
+		padding-block: 1.3em 0;
+		margin-block: 1.3em 0;
+	}
+
+	.commerce_cont_sec .cont dl dt {
+		margin-block: 0 0.5em;
+	}
+
+	.commerce_cont_sec .cont dl dt .title {
+		color: #6C6C6C;
+		font-size: 3.3vw;
+	}
+
+	.commerce_cont_sec .cont dl dd {
+		padding-inline: 3.8vw 0;
+	}
+
+	.commerce_cont_sec .cont dl dd .text {
+		color: initial;
+		font-size: 3.8vw;
+		letter-spacing: .08em;
+		font-weight: 700;
+		line-height: 1.5;
+	}
+
+	.commerce_cont_sec .cont dl dd .text a {
+		text-decoration: none;
+		color: initial;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table {
+		margin-block: 4vw 0;
+		overflow-x: scroll;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table table {
+		width: 205vw;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table table th {
+		padding: 0.9em 1.1em;
+		font-size: 3.6vw;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table table th .small {
+		font-size: 1em;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table table td {
+		padding: 0.9em 1.1em;
+		font-size: 3.6vw;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table .scroll-hint-icon {
+		width: 23vw;
+		height: 23vw;
+		background: rgba(0, 0, 0, 0.4);
+		border-radius: 4px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0.2em;
+		top: 50%;
+		left: 50%;
+		translate: -50% -50%;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table .scroll-hint-icon-wrap.is-active .scroll-hint-icon {
+		opacity: 1;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table .scroll-hint-icon::before {
+		background-image: url(./image/scrollhint.svg);
+		width: 12.8vw;
+		height: auto;
+		aspect-ratio: 1;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table .scroll-hint-icon::after {
+		content: none;
+	}
+
+	.commerce_cont_sec .cont dl dd .price_table .scroll-hint-text {
+		display: none;
+	}ƒ
+}

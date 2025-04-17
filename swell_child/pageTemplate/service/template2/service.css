@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+.page_service_main {
+	background: #F5F5F5;
+	padding-block: 1em 0;
+}
+
+.breadcrumb {
+	margin-block: 0 95px;
+}
+
+.page_service_main .title_box {
+	text-align: center;
+}
+
+.page_service_main .title_box .title {
+	font-size: 40px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.page_service {
+	background: #F5F5F5;
+}
+
+.page_service .common_page_wrap {
+	padding-block: 95px 110px;
+}
+
+.service_cont_sec .cont .item {
+	display: flex;
+	gap: 80px;
+	background: #fff;
+	padding: 80px 100px;
+}
+
+.service_cont_sec .cont .item+.item {
+	margin-block: 2em 0;
+}
+
+.service_cont_sec .cont .item:nth-child(even) {
+	flex-direction: row-reverse;
+}
+
+.service_cont_sec .cont .item .img {
+	flex-shrink: 0;
+	width: 400px;
+}
+
+.service_cont_sec .cont .item .img img {
+	width: 100%;
+	aspect-ratio: 5/6;
+	object-fit: cover;
+}
+
+.service_cont_sec .cont .item .text_box {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.service_cont_sec .cont .item .text_box .title {
+	font-size: 32px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1.5;
+	margin-block: 0 0.6em;
+}
+
+.service_cont_sec .cont .item .text_box .text {
+	font-size: 14px;
+	letter-spacing: .08em;
+	font-weight: 400;
+}
+
+@media (max-width: 750px) {
+	.breadcrumb {
+		margin-block: 0 12vw;
+	}
+
+	.page_service_main .title_box .title {
+		font-size: 5.6vw;
+	}
+
+	.page_service .common_page_wrap {
+		padding-block: 15vw 17vw;
+	}
+
+	.service_cont_sec .wrap {
+		max-width: 95%;
+	}
+
+	.service_cont_sec .cont .item {
+		display: block;
+		padding: 7.5vw 2.5vw;
+	}
+
+	.service_cont_sec .cont .item+.item {
+		margin-block: 1.5em 0;
+	}
+
+	.service_cont_sec .cont .item .img {
+		width: 100%;
+		margin-block: 0 0.8em;
+	}
+
+	.service_cont_sec .cont .item .img img {
+		aspect-ratio: 35/18;
+	}
+
+	.service_cont_sec .cont .item .text_box .title {
+		font-size: 5.1vw;
+		margin-block: 0 0.4em;
+	}
+
+	.service_cont_sec .cont .item .text_box .text {
+		font-size: 3.3vw;
+	}
+}

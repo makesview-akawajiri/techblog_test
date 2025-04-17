@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: "Antro_Vectra";
+	src: url("./fonts/Antro_Vectra.otf") format("opentype");
+}
+
+.f_ant {
+	font-family: "Antro_Vectra", serif;
+}
+
+.page_message_main {
+	padding-block: 100px;
+}
+
+.page_message_main .title_box {
+	margin-block: 0 1.2em;
+}
+
+.page_message_main .title_box .title {
+	font-size: 40px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.page_message .common_page_wrap {
+	padding-block: 0 150px;
+}
+
+.message_cont_sec .wrap {
+	width: 100%;
+}
+
+.message_cont_sec .cont {
+	display: grid;
+	grid-template-columns: 1fr 580px;
+	align-items: flex-start;
+	gap: 140px;
+	margin-inline: calc(50vw - 620px) 0;
+}
+
+.message_cont_sec .cont .img {
+	position: relative;
+}
+
+.message_cont_sec .cont .img img {
+	width: 100%;
+	aspect-ratio: 58/61;
+	object-fit: cover;
+}
+
+.message_cont_sec .cont .img .en_name {
+	color: #fff;
+	font-size: 80px;
+	letter-spacing: .02em;
+	font-weight: 400;
+	line-height: 1;
+	opacity: 0.6;
+	white-space: nowrap;
+	position: absolute;
+	bottom: 25px;
+	right: 100px;
+}
+
+.message_cont_sec .cont .text_box .title_box {
+	border-bottom: 1px solid #707070;
+	padding-block: 0 0.9em;
+	margin-block: 0 1.5em;
+}
+
+.message_cont_sec .cont .text_box .title_box .title {
+	font-size: 28px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.message_cont_sec .cont .text_box .textarea {
+	margin-block: 0 2.8em;
+}
+
+.message_cont_sec .cont .text_box .textarea .text {
+	font-size: 15px;
+	letter-spacing: .08em;
+	font-weight: 400;
+	line-height: 1.9;
+}
+
+.message_cont_sec .cont .text_box .textarea .text+.text {
+	margin-block: 2em 0;
+}
+
+.message_cont_sec .cont .text_box .name_box {
+	display: flex;
+	align-items: center;
+	gap: 2em;
+}
+
+.message_cont_sec .cont .text_box .name_box .position {
+	font-size: 16px;
+	letter-spacing: .08em;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+.message_cont_sec .cont .text_box .name_box .name {
+	font-size: 26px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+@media (max-width: 750px) {
+	.page_message_main {
+		padding-block: 15vw;
+	}
+
+	.page_message_main .title_box {
+		margin-block: 0 0.7em;
+	}
+
+	.page_message_main .title_box .title {
+		font-size: 5.6vw;
+	}
+
+	.page_message .common_page_wrap {
+		padding-block: 0 22vw;
+	}
+
+	.message_cont_sec .cont {
+		display: flex;
+		flex-direction: column;
+		gap: 13vw;
+		margin-inline: 0;
+	}
+
+	.message_cont_sec .cont .img {
+		width: 95vw;
+		right: calc(50% - 45vw);
+	}
+
+	.message_cont_sec .cont .img img {
+		aspect-ratio: 37/24;
+	}
+
+	.message_cont_sec .cont .img .en_name {
+		font-size: 12.8vw;
+		bottom: 4vw;
+		right: 5vw;
+	}
+
+	.message_cont_sec .cont .text_box .title_box .title {
+		font-size: 4.6vw;
+	}
+
+	.message_cont_sec .cont .text_box .textarea .text {
+		font-size: 3.6vw;
+		line-height: 1.8;
+	}
+
+	.message_cont_sec .cont .text_box .name_box {
+		gap: 1.7em;
+	}
+
+	.message_cont_sec .cont .text_box .name_box .position {
+		font-size: 3.6vw;
+	}
+
+	.message_cont_sec .cont .text_box .name_box .name {
+		font-size: 5.9vw;
+	}
+}

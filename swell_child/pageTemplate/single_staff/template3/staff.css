@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+.single_staff_main {
+	padding-block: 140px 50px;
+}
+
+.single_staff_main .title_box {
+	text-align: center;
+}
+
+.single_staff_main .title_box .title {
+	font-size: 40px;
+	letter-spacing: .08em;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+.breadcrumb {
+	text-align: right;
+}
+
+.single_staff .common_page_wrap {
+	padding-block: 70px 140px;
+}
+
+.single_staff .about_sec .inner {
+	display: grid;
+	grid-template-columns: 490px 1fr;
+	align-items: center;
+	gap: 125px;
+}
+
+.single_staff .about_sec .img {
+	position: relative;
+	z-index: 0;
+}
+
+.single_staff .about_sec .img img {
+	width: 100%;
+	aspect-ratio: 49/46;
+	object-fit: cover;
+}
+
+.single_staff .about_sec .img::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: var(--main-color);
+	position: absolute;
+	top: -10px;
+	left: 10px;
+	z-index: -1;
+}
+
+.single_staff .about_sec .text_box .name_box {
+	margin-block: 0 0.5em;
+	position: relative;
+	z-index: 0;
+}
+
+.single_staff .about_sec .text_box .name_box .name {
+	font-size: 40px;
+	letter-spacing: .08em;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+.single_staff .about_sec .text_box .name_box .en_name {
+	color: #EFEFEF;
+	font-size: 70px;
+	letter-spacing: .04em;
+	font-weight: 400;
+	font-family: 'Helvetica', 'Arial', sans-serif;
+	line-height: 1;
+	position: absolute;
+	top: -0.55em;
+	left: 0;
+	z-index: -1;
+}
+
+.single_staff .about_sec .text_box .info {
+	margin-block: 0 2.3em;
+}
+
+.single_staff .about_sec .text_box .info .text {
+	color: #7E7E7E;
+	font-size: 18px;
+	letter-spacing: .08em;
+	font-weight: 500;
+	line-height: 1.5;
+}
+
+.single_staff .about_sec .text_box .catch {
+	display: inline-block;
+	background: #E6E6E6;
+	padding: 1em 0.3em 1em 1.5em;
+}
+
+.single_staff .about_sec .text_box .catch .text {
+	font-size: 26px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1.5;
+}
+
+.single_staff .cont_sec {
+	padding-block: 130px 0;
+}
+
+.single_staff .cont_sec .item {
+	display: flex;
+	gap: 115px;
+}
+
+.single_staff .cont_sec .item+.item {
+	margin-block: 100px 0;
+}
+
+.single_staff .cont_sec .item:nth-child(even) {
+	flex-direction: row-reverse;
+}
+
+.single_staff .cont_sec .item .img {
+	flex-shrink: 0;
+	width: 370px;
+}
+
+.single_staff .cont_sec .item .img img {
+	width: 100%;
+	aspect-ratio: 37/23;
+	object-fit: cover;
+}
+
+.single_staff .cont_sec .item .text_box {
+	width: 100%;
+}
+
+.single_staff .cont_sec .item .text_box .title {
+	font-size: 22px;
+	letter-spacing: .08em;
+	font-weight: 700;
+	line-height: 1.5;
+	border-left: 6px solid var(--main-color);
+	padding-inline: 0.6em 0;
+	margin-block: 0 0.8em;
+}
+
+.single_staff .cont_sec .item .text_box .text {
+	font-size: 16px;
+	letter-spacing: .08em;
+	font-weight: 400;
+}
+
+@media (max-width: 750px) {
+	.single_staff_main {
+		padding-block: 17vw 3.5vw;
+	}
+
+	.single_staff_main .title_box .title {
+		font-size: 5.6vw;
+	}
+
+	.breadcrumb {
+		text-align: center;
+	}
+
+	.single_staff .common_page_wrap {
+		padding-block: 14vw 18vw;
+	}
+
+	.single_staff .about_sec .inner {
+		grid-template-columns: 1fr;
+		gap: 8vw;
+	}
+
+	.single_staff .about_sec .img img {
+		aspect-ratio: 69/40;
+	}
+
+	.single_staff .about_sec .img::before {
+		top: -5px;
+		left: 5px;
+	}
+
+	.single_staff .about_sec .text_box .name_box {}
+
+	.single_staff .about_sec .text_box .name_box .name {
+		font-size: 6.1vw;
+	}
+
+	.single_staff .about_sec .text_box .name_box .en_name {
+		font-size: 9.7vw;
+	}
+
+	.single_staff .about_sec .text_box .info {
+		margin-block: 0 1.3em;
+	}
+
+	.single_staff .about_sec .text_box .info .text {
+		font-size: 3.6vw;
+	}
+
+	.single_staff .about_sec .text_box .catch {
+		width: 100%;
+		padding: 1em 1.5em;
+	}
+
+	.single_staff .about_sec .text_box .catch .text {
+		font-size: 4.6vw;
+	}
+
+	.single_staff .cont_sec {
+		padding-block: 18vw 0;
+	}
+
+	.single_staff .cont_sec .item {
+		flex-direction: column-reverse;
+		gap: 5.5vw;
+	}
+
+	.single_staff .cont_sec .item:nth-child(even) {
+		flex-direction: column-reverse;
+	}
+
+	.single_staff .cont_sec .item+.item {
+		margin-block: 13vw 0;
+	}
+
+	.single_staff .cont_sec .item .img {
+		width: 100%;
+	}
+
+	.single_staff .cont_sec .item .text_box .title {
+		font-size: 4.6vw;
+		border-width: 0 0 0 4px;
+		margin-block: 0 0.6em;
+	}
+
+	.single_staff .cont_sec .item .text_box .text {
+		font-size: 3.6vw;
+	}
+}
