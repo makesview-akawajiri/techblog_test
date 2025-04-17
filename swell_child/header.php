@@ -96,4 +96,4 @@
 
     </div>
 
-    <header id="pc_header">ヘッダーを修正しました</header>
+    <header id="pc_header">ヘッダーを修正しましたヘッダーを修正しました</header>
